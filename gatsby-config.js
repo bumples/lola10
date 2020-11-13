@@ -13,6 +13,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: 'gatsby-source-shopify',
+      options: {
+        shopName: 'Bumples',
+        accessToken:`212f349766c267ccb93ebcef79e471ea`,
+        apiVersion: '2020-10',
+        },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
