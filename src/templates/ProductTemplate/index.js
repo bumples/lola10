@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import {
   Layout,
   ImageGallery,
+  ProductQuantityAdder,
+  Button,
   SEO,
 } from 'components';
 import { Grid, SelectWrapper, Price } from './styles';
