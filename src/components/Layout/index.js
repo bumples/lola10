@@ -1,14 +1,15 @@
 import React from 'react';
 import { LayoutWrapper } from './styles';
+import { Header } from '../Header';
 
 const Layout = ({ children }) => {
-    return (
+  return (
     <>
-        
-        <LayoutWrapper>
+      <Header />
+      <LayoutWrapper>
         <main>{children}</main>
-        </LayoutWrapper>
+      </LayoutWrapper>
     </>
-    );
+  );
 };
 export { Layout };

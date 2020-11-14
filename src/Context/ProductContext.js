@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const newLocal_1 = `
+const query = graphql`
   fragment ProductTileFields on ShopifyProduct {
     handle
     priceRange {
@@ -43,8 +43,6 @@ const newLocal_1 = `
     }
   }
 `;
-const newLocal = newLocal_1;
-const query = graphqlnewLocal;
 
 const defaultState = {
   products: [],

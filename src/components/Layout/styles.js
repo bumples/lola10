@@ -1,3 +1,4 @@
+import styled from "styled-components"
 import styled from 'styled-components';
 
 export const LayoutWrapper = styled.div`
@@ -5,5 +6,5 @@ export const LayoutWrapper = styled.div`
   max-width: 1200px;
   box-sizing: border-box;
   padding: 0 20px 40px 20px;
-`;
  
+`;

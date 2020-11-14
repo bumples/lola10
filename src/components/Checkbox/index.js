@@ -11,4 +11,4 @@ export function Checkbox({ checked }) {
     </CheckboxWrapper>
   );
 }
-© 2020 GitHub, Inc.
+ 
