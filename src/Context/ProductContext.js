@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
-  fragment ProductTileFields on ShopifyProduct {
+   fragment ProductTileFields on ShopifyProduct {
     handle
     priceRange {
       minVariantPrice {
@@ -10,8 +10,7 @@ const query = graphql`
       }
     }
   }
-  {
-    allShopifyProduct {
+ allShopifyProduct {
       edges {
         node {
           ...ShopifyProductFields
@@ -19,6 +18,8 @@ const query = graphql`
         }
       }
     }
+    
+   { 
     allShopifyCollection(sort: { fields: title, order: ASC }) {
       edges {
         node {
@@ -29,12 +30,20 @@ const query = graphql`
           title
           description
           shopifyId
-          
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }
     }
   }
+ 
 `;
 
 const defaultState = {
