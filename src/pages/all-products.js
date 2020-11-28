@@ -62,7 +62,7 @@ export default function AllProducts() {
   return (
     <Layout>
       <SEO
-        description="The Bumples store all products"
+        description="The MadHatter store all products"
         title="All products"
       />
       {!!searchTerm && !!filteredProducts.length && (

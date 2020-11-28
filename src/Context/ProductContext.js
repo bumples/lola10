@@ -11,7 +11,7 @@ const query = graphql`
     }
   }
   {
-     allShopifyProduct {
+    allShopifyProduct {
       edges {
         node {
           ...ShopifyProductFields
@@ -19,21 +19,22 @@ const query = graphql`
         }
       }
     }
-    allShopifyCollection(sort: { fields: title, order: ASC}) {
-    edges {
-      node {
-        products {
-          ...ShopifyProductFields
-          ...ProductTileFields
-        }
-        title
-        description
-        shopifyId
-        image {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-               ...GatsbyImageSharpFluid_withWebp
+    allShopifyCollection(sort: { fields: title, order: ASC }) {
+      edges {
+        node {
+          products {
+            ...ShopifyProductFields
+            ...ProductTileFields
+          }
+          title
+          description
+          shopifyId
+          image {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
               }
             }
           }
@@ -41,7 +42,6 @@ const query = graphql`
       }
     }
   }
-} 
 `;
 
 const defaultState = {
