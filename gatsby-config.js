@@ -1,10 +1,35 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Bumples Books`,
+    description: `Kids books and gifts for 4-10`,
+    author: `@bumples`,
   },
   plugins: [
+    `gatsby-plugin-remove-fingerprints`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-optional-chaining`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `open sans\:400`,
+          'open sans:400i',
+          `open sans\:700`,
+          'open sans:700i',
+          `open sans\:800`,
+          'open sans:800i',
+        ],
+      },
+    },
+
+    {
+      resolve: 'gatsby-source-shopify',
+      options: {
+        shopName:'Bumples',
+        accessToken:`212f349766c267ccb93ebcef79e471ea`,
+        apiVersion:'2020-10',
+        },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,19 +38,9 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-    {
-      resolve: 'gatsby-source-shopify',
-      options: {
-        shopName: 'Bumples',
-        accessToken:`212f349766c267ccb93ebcef79e471ea`,
-        apiVersion: '2020-10',
-        },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    'gatsby-image'
-     
+    `gatsby-plugin-sharp`, 
+       
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -35,11 +50,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/Bumples.png`, // This path is relative to the root of the site.
+        icon: `src/images/Bumples.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
-}
+};

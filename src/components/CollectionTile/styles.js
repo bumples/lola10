@@ -26,6 +26,7 @@ export const CollectionTileContent = styled.div`
   text-align: center;
   > div {
     padding: 20px;
+   
     ${StyledLink} {
       padding: 10px;
       background: white;
@@ -37,6 +38,7 @@ export const CollectionTileContent = styled.div`
       color: black;
       text-decoration: none;
       cursor: pointer;
+      
       &:hover {
         color: white;
         background: black;
