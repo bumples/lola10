@@ -27,17 +27,17 @@ const query = graphql`
             ...ProductTileFields
           }
           title
-          description
-          shopifyId
-          image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1200) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+        description
+        shopifyId
+        image {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
+        }
         }
       }
     }
