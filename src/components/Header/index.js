@@ -8,9 +8,11 @@ import { Link } from 'gatsby';
 export function Header() {
   return (
     <HeaderWrapper>
+    <div>
       <Link to="/">
         <Logo/>
       </Link>
+    </div>
       <Search />
       <Cart />
     </HeaderWrapper>

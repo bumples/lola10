@@ -6,6 +6,7 @@ export const ProductQuantityAdderWrapper = styled.div`
     display: block;
     margin-bottom: 10px;
   }
+  
   > form {
     display: flex;
   }

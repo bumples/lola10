@@ -5,6 +5,7 @@ export const CartFooter = styled.div`
   grid-template-columns: 5fr 1fr 40px;
   > div {
     padding: 8px;
+
     &:first-child {
       text-align: right;
     }
@@ -27,10 +28,11 @@ export const CartItem = styled.div`
   grid-template-columns: 2fr 1fr 2fr 1fr 40px;
   > div {
     padding: 8px;
+
     &:first-child {
       > div:first-child {
         font-weight: bold;
-      }
+      }      
       > div:last-child {
         color: #999;
         margin-top: 4px;
@@ -43,6 +45,7 @@ export const CartItem = styled.div`
 export const Footer = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
   > div:last-child {
     text-align: right;
   }

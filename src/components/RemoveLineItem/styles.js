@@ -6,4 +6,3 @@ export const Icon = styled.div`
     color: red;
   }
 `;
- 
