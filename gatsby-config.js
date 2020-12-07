@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Bumples Books`,
@@ -23,11 +27,11 @@ module.exports = {
     },
 
     {
-      resolve: 'gatsby-source-shopify',
+       resolve: 'gatsby-source-shopify',
       options: {
-        shopName:'Bumples',
-        accessToken:`212f349766c267ccb93ebcef79e471ea`,
-        apiVersion:'2020-10',
+        shopName: process.env.GATSBY_SHOP_NAME,
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
+        apiVersion: '2020-10',
         },
     },
     `gatsby-plugin-react-helmet`,
@@ -52,6 +56,9 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/Bumples.png`,
       },
+      flags: {
+  PRESERVE_WEBPACK_CACHE: true,
+}
     },
   ],
 };
