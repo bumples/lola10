@@ -32,7 +32,7 @@ export const CollectionTileContent = styled.div`
       background: white;
       border: 1px solid black;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       display: inline-block;
       color: black;
@@ -52,7 +52,7 @@ export const Title = styled.div`
   margin-bottom: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   border-radius: 10px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
@@ -60,7 +60,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   margin: 10px;
   border-radius: 10px;
   background: ${props => (props.sale ? 'red' : 'none')};

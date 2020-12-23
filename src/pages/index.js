@@ -16,12 +16,12 @@ const IndexPage = () => {
       <HomepageCollectionsGrid
         collections={
           collections.filter(
-            collection => collection.title !== 'Featured'
+            collection => collection.title !== 'Featured Hats'
           ) || []
         }
       />
       {!!collections.find(
-        collection => collection.title === 'Featured'
+        collection => collection.title === 'Featured Hats'
       ) && <FeaturedProducts />}
     </Layout>
   );
