@@ -12,16 +12,16 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO description="Bumples homepage" title="Homepage" />
+      <SEO description="Bumples homepage" title="Bumple Books" />
       <HomepageCollectionsGrid
         collections={
           collections.filter(
-            collection => collection.title !== 'Featured Hats'
+            collection => collection.title !== 'Featured New Books'
           ) || []
         }
       />
       {!!collections.find(
-        collection => collection.title === 'Featured Hats'
+        collection => collection.title === 'Featured New Books'
       ) && <FeaturedProducts />}
     </Layout>
   );

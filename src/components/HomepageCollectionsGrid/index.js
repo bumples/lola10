@@ -31,7 +31,7 @@ export function HomepageCollectionsGrid({ collections }) {
             )}`}
             title={collection.title}
             description={collection.description}
-            backgroundImage={collection.image.localFile.childImageSharp.fluid}
+            backgroundImage={collection.image?.localFile.childImageSharp.fluid}
             key={collection.shopifyId}
           />
         ))}

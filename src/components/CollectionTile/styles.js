@@ -20,9 +20,9 @@ export const CollectionTileContent = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  color: white;
+  color: dk blue;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 99, 71, 0 );
   text-align: center;
   > div {
     padding: 20px;
@@ -52,7 +52,7 @@ export const Title = styled.div`
   margin-bottom: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: bold;
   border-radius: 10px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);

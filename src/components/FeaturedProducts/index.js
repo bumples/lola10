@@ -6,7 +6,7 @@ export function FeaturedProducts() {
   const { collections } = React.useContext(ProductContext);
 
   const featuredCollection = collections.find(
-    collection => collection.title === 'Featured'
+    collection => collection.title === 'Featured New Books'
   );
 
   return (
