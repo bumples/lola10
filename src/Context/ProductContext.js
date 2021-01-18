@@ -58,7 +58,13 @@ export function ProductContextProvider({ children }) {
     <ProductContext.Provider
       value={{
         products: allShopifyProduct.edges.map(({ node }) => node) || [],
-        collections: allShopifyCollection.edges.map(({ node }) => node) || [],
+        _collections: allShopifyCollection.edges.map(({ node }) => node) || [],
+        get collections() {
+          return this._collections;
+        },
+        set collections(value) {
+          this._collections = value;
+        },
       }}
     >
       {children}
