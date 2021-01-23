@@ -14,9 +14,9 @@ export const CollectionTileWrapper = styled.div`
 
 export const CollectionTileContent = styled.div`
   display: flex;
-  flex-grow: 1;
+  flex-grow: .06;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@ export const CollectionTileContent = styled.div`
   background: rgba(255, 99, 71, 0 );
   text-align: center;
   > div {
-    padding: 20px;
+    padding: 10px;
    
     ${StyledLink} {
       padding: 10px;
@@ -48,11 +48,11 @@ export const CollectionTileContent = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin-bottom: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 10px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);

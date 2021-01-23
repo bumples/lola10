@@ -13,9 +13,11 @@ module.exports = {
   plugins: [
     `gatsby-plugin-remove-fingerprints`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transformer-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-optional-chaining`,
+     `gatsby-plugin-sitemap`,
+      
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

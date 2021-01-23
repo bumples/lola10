@@ -16,12 +16,12 @@ const IndexPage = () => {
       <HomepageCollectionsGrid
         collections={
           collections.filter(
-            collection => collection.title !== 'Featured New Books'
+            collection => collection.title !== 'Featured Books'
           ) || []
         }
       />
       {!!collections.find(
-        collection => collection.title === 'Featured New Books'
+        collection => collection.title === 'Featured Books'
       ) && <FeaturedProducts />}
     </Layout>
   );
