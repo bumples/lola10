@@ -2,6 +2,7 @@ import React from 'react';
 import { HeaderWrapper } from './styles';
 import { Cart } from '../Cart';
 import { Logo } from '../Logo';
+import { About} from '../About'
 import { Search } from '../Search';
 import { Link } from 'gatsby';
 
@@ -12,7 +13,7 @@ export function Header() {
         <Link to="/">
           <Logo />
         </Link>
-      </div>
+         </div>
       <Search />
       <Cart />
     </HeaderWrapper>
