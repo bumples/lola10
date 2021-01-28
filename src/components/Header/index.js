@@ -2,7 +2,7 @@ import React from 'react';
 import { HeaderWrapper } from './styles';
 import { Cart } from '../Cart';
 import { Logo } from '../Logo';
-import { About} from '../About'
+import about from '../about';
 import { Search } from '../Search';
 import { Link } from 'gatsby';
 
@@ -12,6 +12,10 @@ export function Header() {
       <div>
         <Link to="/">
           <Logo />
+        </Link>
+         <Link
+        to={`/about/`}>
+          about
         </Link>
          </div>
       <Search />
