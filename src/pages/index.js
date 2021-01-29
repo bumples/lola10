@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "gatsby"
 import {
   Layout,
   SEO,
@@ -19,12 +19,11 @@ const IndexPage = () => {
             collection => collection.title !== 'Featured Books'
           ) || []
         }
-      />
+     />
       {!!collections.find(
         collection => collection.title === 'Featured Books'
       ) && <FeaturedProducts />}
-      
-    </Layout>
+     </Layout>
   );
 };
 

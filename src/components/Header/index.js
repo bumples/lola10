@@ -12,7 +12,7 @@ export function Header() {
         <Link to="/">
           <Logo />
         </Link>
-         </div>
+      </div>
       <Search />
       <Cart />
     </HeaderWrapper>
