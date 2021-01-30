@@ -7,8 +7,6 @@ module.exports = {
     title: `Bumples Books`,
     description: `Kids books and gifts for 4-10`,
     author: `@bumples`,
-    
-     
   },
   plugins: [
     `gatsby-plugin-remove-fingerprints`,
@@ -16,7 +14,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-optional-chaining`,
-     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sitemap`,
       
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -32,13 +30,11 @@ module.exports = {
       },
     },
  {
-     
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
       },
-
     },
     {
       resolve: 'gatsby-source-shopify',
@@ -56,10 +52,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-     
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`, 
-  
+       
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
