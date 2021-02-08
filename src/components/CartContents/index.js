@@ -7,24 +7,24 @@ import { Button } from '../Button';
 import { navigate } from '@reach/router';
 
 export function CartContents() {
-    const { checkout, updateLineItem } = React.useContext(CartContext);
+  const { checkout, updateLineItem } = React.useContext(CartContext);
 
-    const handleAdjustQuantity = ({ quantity, variantId }) => {
+  const handleAdjustQuantity = ({ quantity, variantId }) => {
     updateLineItem({ quantity, variantId });
-    };
+  };
 
-    return (
+  return (
     <section>
-        <h1>Your cart</h1>
-        {!!checkout?.lineItems && (
+      <h1>Your cart</h1>
+      {!!checkout?.lineItems && (
         <CartHeader>
-            <div>Product</div>
-            <div>Unit price</div>
-            <div>Quantity</div>
-            <div>Amount</div>
+          <div>Product</div>
+          <div>Unit price</div>
+          <div>Quantity</div>
+          <div>Amount</div>
         </CartHeader>
-        )}
-        {checkout?.lineItems?.map(item => (
+      )}
+      {checkout?.lineItems?.map(item => (
         <CartItem key={item.variant.id}>
           <div>
             <div>{item.title}</div>
@@ -41,36 +41,36 @@ export function CartContents() {
             <RemoveLineItem lineItemId={item.id} />
           </div>
         </CartItem>
-        ))}
-        {!!checkout?.lineItems && (
+      ))}
+      {!!checkout?.lineItems && (
         <CartFooter>
-            <div>
+          <div>
             <strong>Total:</strong>
           </div>
-            <div>
+          <div>
             <span>£{checkout?.totalPrice}</span>
-            </div>
+          </div>
         </CartFooter>
-        )}
-        {!checkout?.lineItems && <h4>You cart is empty.</h4>}
-        <Footer>
+      )}
+      {!checkout?.lineItems && <h4>You cart is empty.</h4>}
+      <Footer>
         <div>
-            <Button onClick={() => navigate(-1)}>Continue shopping</Button>
+          <Button onClick={() => navigate(-1)}>Continue shopping</Button>
         </div>
         <div>
-            {!!checkout?.webUrl && (
+          {!!checkout?.webUrl && (
             <Button
-                onClick={() => {
+              onClick={() => {
                 window.location.href = checkout.webUrl;
-                }}
+              }}
             >
-                Checkout
+              Checkout
             </Button>
-            )}
+          )}
         </div>
-        </Footer>
+      </Footer>
     </section>
-    );
+  );
 }
 
 export * from './CartContents';
