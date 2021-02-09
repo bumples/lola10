@@ -9,6 +9,7 @@ import ProductContext from 'context/ProductContext';
 
 const IndexPage = () => {
   const { collections } = React.useContext(ProductContext);
+  
   return (
     <Layout>
       <SEO description="Bumples homepage" title="Bumple Books" />
