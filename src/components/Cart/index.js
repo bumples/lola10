@@ -4,7 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import CartContext from 'context/CartContext';
 
 export function Cart() {
-  const { checkout } = React.useContext(CartContext);
+  const {checkout} = React.useContext(CartContext);
   let totalQuantity = 0;
   if (checkout) {
     checkout.lineItems.forEach(lineItem => {
