@@ -1,8 +1,10 @@
 import React from 'react';
 import CartContext from 'context/CartContext';
-import { CartItem, CartHeader, CartFooter } from './styles';
+import { CartItem, CartHeader, CartFooter,Footer } from './styles';
 import  { QuantityAdjuster} from '../QuantityAdjuster';
 import  { RemoveLineItem} from '../RemoveLineItem';
+import { Button} from '../Button';
+import { navigate } from '@reach/router';
 
 export function CartContents() {
 const {checkout, updateLineItem} = React.useContext(CartContext);
@@ -51,9 +53,26 @@ return (
         <spam>${checkout?.totalPrice}</spam>
     </div>
 </CartFooter>
-    
+{!checkout?.lineItems && <h4>Your cart is empty.</h4>}
+<Footer>
+    <div>
+        <Button onClick={() => navigate(-1)}>Continue shopping</Button>  
+        </div> 
+        <div>
+            {!!checkout?.webUrl && (
+            <Button
+                onClick={() => {
+                window.location.href = checkout.webUrl;
+            }}
+            >
+                Checkout
+            </Button>
+        )}
+        </div>
+
+    </Footer>    
 </section>
 );
 }
 
-//export * from './CartContents';//
+
