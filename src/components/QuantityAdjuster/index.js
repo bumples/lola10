@@ -4,11 +4,11 @@ import { QuantityAdjusterWrapper, AdjusterButton } from './styles';
 export function QuantityAdjuster({ item, onAdjust }) {
   const { quantity } = item;
 
-  const handleDecrementQuantity = () => {
+  const handleDecrementQuantity = ()=> {
     onAdjust({ variantId: item.variant.id, quantity: -1 });
   };
 
-  const handleIncrementQuantity = () => {
+  const handleIncrementQuantity = ()=> {
     onAdjust({ variantId: item.variant.id, quantity: 1 });
   };
 

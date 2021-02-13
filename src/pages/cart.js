@@ -1,11 +1,12 @@
 import React from 'react';
-import { Layout, CartContents, SEO } from 'components';
+import { Layout, CartContents, SEO} from 'components';
 
 export default function CartPage() {
-  return (
-    <Layout>
-        <SEO description="Bumples" title="Cart" />
-        <CartContents />
-    </Layout>
-    );
+  return(
+<Layout>
+  <SEO descriptions="Bumples cart" title="Cart"/>
+    <CartContents />
+
+  </Layout>
+  ); 
 }
