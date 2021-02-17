@@ -66,7 +66,7 @@ if (lineItemVariant) {
       },
     ]);
   } else {
-    newCheckout = await client.checkout.removeLineItems(newcheckout.id, [
+    newCheckout = await client.checkout.removeLineItems(newCheckout.id, [
       lineItemVariant.id,
     ]);
     }
@@ -86,7 +86,7 @@ if (lineItemVariant) {
   }
 };
 
-const removeLineItem = async lineItem => {
+const removeLineItem = async lineItemId => {
   const newCheckout = await client.checkout.removeLineItems(checkout.id, [
     lineItemId,
   ]);
@@ -94,9 +94,9 @@ const removeLineItem = async lineItem => {
   setCheckout(newCheckout);
 };
 
-const dismissSuccessfulOrder = () => {
-  setSuccessfulOrder(null);
-};
+  function dismissSuccessfulOrder() {
+    setSuccessfulOrder(null);
+  }
 
 return (
   <CartContext.Provider
