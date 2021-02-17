@@ -86,13 +86,13 @@ if (lineItemVariant) {
   }
 };
 
-const removeLineItem = async lineItemId => {
-  const newCheckout = await client.checkout.removeLineItems(checkout.id, [
-    lineItemId,
-  ]);
+  function removeLineItem(lineItemId) {
+    const newCheckout = await client.checkout.removeLineItems(checkout.id, [
+      lineItemId,
+    ]);
 
-  setCheckout(newCheckout);
-};
+    setCheckout(newCheckout);
+  }
 
   function dismissSuccessfulOrder() {
     setSuccessfulOrder(null);
