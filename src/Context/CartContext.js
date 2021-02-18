@@ -86,7 +86,7 @@ if (lineItemVariant) {
   }
 };
 
-  function removeLineItem(lineItemId) {
+  const removeLineItem = async lineItemId => {
     const newCheckout = await client.checkout.removeLineItems(checkout.id, [
       lineItemId,
     ]);
