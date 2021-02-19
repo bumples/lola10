@@ -4,7 +4,7 @@ import { CategoryFilterItem } from './CategoryFilterItem';
 import { FiltersWrapper } from './styles';
 
 export function Filters() {
-  const { collections } = React.useContext(ProductContext);
+  const { collections } = React.Usecontext(ProductContext);
 
   return (
     <FiltersWrapper>
